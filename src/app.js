@@ -13,5 +13,5 @@ app.use(express.json())
 app.use('/ai', aiRoutes);
 
 
-
+export default app;
 

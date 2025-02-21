@@ -1,14 +1,14 @@
 import { generateContent } from "../services/ai.service.js"; // Named import
 
-export const getResponse = async (req, res) => {
-    const prompt = req.body.prompt;
+export const getReview = async (req, res) => {
+    const code = req.body.code;
 
-    if (!prompt) {
+    if (!code) {
         return res.status(400).send("Prompt required!");
     }
 
     try {
-        const response = await generateContent(prompt);
+        const response = await generateContent(code);
         res.send(response);
     } catch (error) {
         console.error("Error in getResponse:", error);
