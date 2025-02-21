@@ -1,10 +1,17 @@
-const express =require("express")
+import express from 'express';
+import aiRoutes from './routes/ai.routes.js';
+import * as dotenv from 'dotenv'; // Import dotenv
+
+dotenv.config();
 
 
-const app= express()
 
-app.get("/",(req,res)=>{
-    res.send("Hello World")
-})
+export const app = express();
 
-module.exports=app;
+app.use(express.json())
+
+app.use('/ai', aiRoutes);
+
+
+
+
