@@ -5,6 +5,7 @@ import "prismjs/themes/prism-tomorrow.css";
 import Editor from "react-simple-code-editor";
 
 import Prism from "prismjs";
+import axios from "axios"
 import "./App.css";
 
 function App() {
@@ -12,6 +13,13 @@ function App() {
     return 1 + 1;
   }`);
 
+
+  async function reviewCode(){
+
+
+   const response= await axios.post("http://localhost:3001/ai/get-review",{code})
+   console.log(response.data)
+  }
  
   return (
     <>
@@ -34,7 +42,7 @@ function App() {
             }}
           />
           </div>
-          <div className="review">Review</div>
+          <div onClick={reviewCode} className="review">Review</div>
         </div>
         <div className="right"></div>
       </main>
