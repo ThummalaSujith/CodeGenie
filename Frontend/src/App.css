@@ -1,0 +1,76 @@
+*{
+  margin:0%;
+  padding:0%;
+  box-sizing: border-box;
+}
+
+html,body,#root
+{
+  height:100%;
+  width:100%
+}
+
+
+main{
+  height:100%;
+  width:100%;
+  padding:1.5rem;
+  display:flex;
+  gap:1rem
+}
+
+main .left, main .right{
+height:100%;
+flex-basis: 50%;
+border-radius:0.7rem;
+
+}
+
+
+main .left{
+  background-color: rgb(7, 7, 7);
+  position: relative;
+}
+
+main .left .review{
+  position:absolute;
+  right:1rem;
+  bottom:1rem;
+  background-color: rgb(38, 160, 204);
+  color:black;
+  padding:0.5rem 2rem;
+  border-radius: 10px;
+  font-weight:500;
+  cursor:pointer;
+  user-select:none;
+}
+
+ .left .code, .code pre{
+height:100%;
+width: 100%;
+margin:0;
+border-radius:0.7rem
+}
+
+main .right {
+  background-color: rgb(59, 58, 58);
+
+}
+
+@font-face {
+  font-family: 'Fira Code'; /* Give the font a name */
+  src: url('/fonts/FiraCode-Regular.woff2') format('woff2'), /* Path to woff2 */
+       url('/fonts/FiraCode-Regular.woff') format('woff'), /* Path to woff */
+       url('/fonts/FiraCode-Regular.ttf') format('truetype'); /* Path to ttf */
+  font-weight: normal; /* Set the font weight */
+  font-style: normal; /* Set the font style */
+}
+
+@font-face {
+  font-family: 'Fira Mono'; /* Give the font a name */
+  src: url('/fonts/FiraMono-Regular.woff2') format('woff2'), /* Path to woff2 */
+       url('/fonts/FiraMono-Regular.woff') format('woff'), /* Path to woff */
+       url('/fonts/FiraMono-Regular.ttf') format('truetype'); /* Path to ttf */
+  font-weight: normal; /* Set the font weight */
+  font-style: normal; /* Set the font style */
+}
